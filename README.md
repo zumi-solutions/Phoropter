@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-# Phoropter
-This is phoropter original source code 
-=======
-This is Zumi Repository 
-# AM437x
->>>>>>> first commit
+Phoropter
+This is phoropter Left side controller source code - Feature / gpio 
+
+
