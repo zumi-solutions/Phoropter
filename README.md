@@ -1,4 +1,4 @@
 Phoropter
-This is phoropter Left side controller source code - Feature / gpio 
+This is phoropter source code - Feature / gpio 
 
 
