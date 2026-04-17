@@ -728,6 +728,7 @@ __weak void HAL_I2C_MspDeInit(I2C_HandleTypeDef *hi2c)
 HAL_StatusTypeDef HAL_I2C_RegisterCallback(I2C_HandleTypeDef *hi2c, HAL_I2C_CallbackIDTypeDef CallbackID,
                                            pI2C_CallbackTypeDef pCallback)
 {
+ printf(======i2c sample print=======\r\n);
   HAL_StatusTypeDef status = HAL_OK;
 
   if (pCallback == NULL)
