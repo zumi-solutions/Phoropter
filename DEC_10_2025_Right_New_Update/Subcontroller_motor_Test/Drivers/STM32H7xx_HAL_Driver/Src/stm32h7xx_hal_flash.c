@@ -115,7 +115,7 @@ FLASH_ProcessTypeDef pFlash;
 /** @defgroup FLASH_Exported_Functions FLASH Exported functions
   * @{
   */
-
+printf("This is sample print");
 /** @defgroup FLASH_Exported_Functions_Group1 Programming operation functions
  *  @brief   Programming operation functions
  *
