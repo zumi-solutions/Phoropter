@@ -505,18 +505,34 @@ HAL_StatusTypeDef HAL_GPIO_LockPin(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin)
 void HAL_GPIO_EXTI_IRQHandler(uint16_t GPIO_Pin)
 {
 #if defined(DUAL_CORE) && defined(CORE_CM4)
+
+  printf("DEBUG: Entered EXTI IRQ Handler (DUAL CORE)\n");
+
   if (__HAL_GPIO_EXTID2_GET_IT(GPIO_Pin) != 0x00U)
   {
+    printf("DEBUG: Interrupt detected on GPIO Pin: %d\n", GPIO_Pin);
+
     __HAL_GPIO_EXTID2_CLEAR_IT(GPIO_Pin);
+    printf("DEBUG: Interrupt flag cleared\n");
+
     HAL_GPIO_EXTI_Callback(GPIO_Pin);
   }
+
 #else
+
+  printf("DEBUG: Entered EXTI IRQ Handler\n");
+
   /* EXTI line interrupt detected */
   if (__HAL_GPIO_EXTI_GET_IT(GPIO_Pin) != 0x00U)
   {
+    printf("DEBUG: Interrupt detected on GPIO Pin: %d\n", GPIO_Pin);
+
     __HAL_GPIO_EXTI_CLEAR_IT(GPIO_Pin);
+    printf("DEBUG: Interrupt flag cleared\n");
+
     HAL_GPIO_EXTI_Callback(GPIO_Pin);
   }
+
 #endif
 }
 
